@@ -1,4 +1,79 @@
-<!DOCTYPE html>
+<?php 
+
+include_once('classes/Owners.class.php');
+
+$owner = new Owner();
+if (isset($_POST['btnSignup']))
+{
+
+  try {
+
+  $pass   = $_POST['password'];
+  $salt = "KZE9323.|@è.==+";
+  $hashed    = md5($pass . $salt);
+
+  $owner->FirstName     = $_POST['firstname'];
+  $owner->LastName    = $_POST['name'];
+  $owner->Email       = $_POST['email'];
+  $owner->PhoneNumber   = $_POST['phonenumber'];
+  $owner->Password    = $hashed;
+  $owner->City      = $_POST['city'];
+  $owner->Street      = $_POST['street'];
+  $owner->PostalCode    = $_POST['postcode'];
+
+  $userExists =     $owner->userExists();
+  if($userExists == false){
+    $owner->register();
+    $feedback="Succesvol geregistreerd";
+  }else{
+    $feedback = "Email adres is al in gebruik";
+
+  }
+  
+
+   } catch (Exception $e) {
+    
+      $feedback = $e->getMessage();
+      
+
+    }
+}
+
+if (isset($_POST['btnLogin']))
+{
+
+  try {
+
+  $pass         = $_POST['password'];
+  $salt           = "KZE9323.|@è.==+";
+  $hashed           = md5($pass . $salt);
+
+  $owner->Email       = $_POST['username'];
+  $owner->Password    = $hashed;
+  $ownerID =        $owner->getOwnerId();
+  $ownerName=       $owner->getOwnerName();
+  $loggedin =       $owner->login();
+  
+  session_start();
+
+  $_SESSION['loggedin'] = $loggedin;
+  $_SESSION['ownerid'] = $ownerID;
+  $_SESSION['ownerName'] = $ownerName;
+  if ($loggedin== true)
+  {
+    header("Location: kiesrestaurant.php");
+  }else{
+    $feedback = "paswoord of emailadres is fout";
+  }
+
+   } catch (Exception $e) {
+    
+      $feedback = $e->getMessage();
+     }
+}
+
+
+ ?><!DOCTYPE html>
 <html>
   <head>
     <title>Add Some Features</title>
@@ -18,7 +93,7 @@
                 <img src="img/logo.png" alt="logo">
               
 
-             <form role="form">
+  <form role="form">
   <div class="form-group">
     <label for="EmailLogin">E-mail</label>
     <input type="email" class="form-control" id="EmailLogin" placeholder="Geef je e-mailadres">
