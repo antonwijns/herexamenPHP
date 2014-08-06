@@ -9,7 +9,7 @@ private $m_sFirstName;
 private $m_sLastName;
 private $m_sEmail;
 private $m_sPassword;
-private $m_tProfilepic;
+private $m_sProfilepic;
 
 
 public function __set($p_sProperty, $p_vValue)
@@ -38,7 +38,7 @@ public function __set($p_sProperty, $p_vValue)
 			break;
 
 			case 'Profilepic' :
-			$this->m_tProfilepic= $p_vValue;
+			$this->m_sProfilepic= $p_vValue;
 			break;
 		}
 
@@ -49,12 +49,12 @@ public function register()
 		{
 
 		$db = new Db();
-		$sql = "insert into phpherexamen.user (LastName, FirstName, Email, Password, Profilepic) values('"
-		 . $db->conn->real_escape_string($this->m_sLastName) ."', '" 
+		$sql = "insert into user (FirstName, LastName, Email, Password, Profilepic) values('"
 		 . $db->conn->real_escape_string($this->m_sFirstName). "', '" 
+		 . $db->conn->real_escape_string($this->m_sLastName) ."', '" 
 		 . $db->conn->real_escape_string($this->m_sEmail)	 . "', '"
 		 . $db->conn->real_escape_string($this->m_sPassword)	 . "', '"
-		 . $db->conn->real_escape_string($this->m_tProfilepic)	 . ");";
+		 . $db->conn->real_escape_string($this->m_sProfilepic)	 . "');";
 
 		$db->conn->query($sql);
 
@@ -64,7 +64,7 @@ public function userExists()
 		{
 
 		$db = new Db();
-			$sql = "select * from phpherexamen.user where 
+			$sql = "select * from user where 
 			Email = '" .  $db->conn->real_escape_string($this->m_sEmail) . "';";
 			
 			$result = $db->conn->query($sql);

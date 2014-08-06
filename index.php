@@ -3,41 +3,6 @@
 include_once('classes/User.class.php');
 
 $user = new User();
-if (isset($_POST['btnSignup']))
-{
-
-  try {
-
-  $pass   = $_POST['password'];
-  $salt = "KZE9323.|@è.==+";
-  $hashed    = md5($pass . $salt);
-
-  $owner->FirstName     = $_POST['firstname'];
-  $owner->LastName    = $_POST['name'];
-  $owner->Email       = $_POST['email'];
-  $owner->PhoneNumber   = $_POST['phonenumber'];
-  $owner->Password    = $hashed;
-  $owner->City      = $_POST['city'];
-  $owner->Street      = $_POST['street'];
-  $owner->PostalCode    = $_POST['postcode'];
-
-  $userExists =     $owner->userExists();
-  if($userExists == false){
-    $owner->register();
-    $feedback="Succesvol geregistreerd";
-  }else{
-    $feedback = "Email adres is al in gebruik";
-
-  }
-  
-
-   } catch (Exception $e) {
-    
-      $feedback = $e->getMessage();
-      
-
-    }
-}
 
 if (isset($_POST['btnLogin']))
 {
