@@ -49,7 +49,7 @@ public function register()
 		{
 
 		$db = new Db();
-		$sql = "insert into phpherexamen.user (LastName, FirstName, Email,Password, Profilepic) values('"
+		$sql = "insert into phpherexamen.user (LastName, FirstName, Email, Password, Profilepic) values('"
 		 . $db->conn->real_escape_string($this->m_sLastName) ."', '" 
 		 . $db->conn->real_escape_string($this->m_sFirstName). "', '" 
 		 . $db->conn->real_escape_string($this->m_sEmail)	 . "', '"

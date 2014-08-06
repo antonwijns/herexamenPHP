@@ -1,8 +1,8 @@
 <?php 
 
-include_once('classes/Owners.class.php');
+include_once('classes/User.class.php');
 
-$owner = new Owner();
+$user = new User();
 if (isset($_POST['btnSignup']))
 {
 

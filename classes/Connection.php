@@ -4,7 +4,7 @@ class Db
 	{
 		private $m_sHost = "db4free.net";
 		private $m_sUser = "anton";
-		private $m_sPassword = "A7c2x785d";
+		private $m_sPassword = "86db1a";
 		private $m_sDatabase = "phpherexamen";
 		public $conn;
 
