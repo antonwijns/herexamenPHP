@@ -28,9 +28,9 @@
 
 
           <form  id="featureinput" role="form">
-            <div class="form-group">
+            <div class="form-group input-group-lg">
           
-              <input type="text" class="form-control" id="FeatureInput" placeholder="Geef hier je idee voor een gewenste feature" name="addfeature">
+              <input type="text" class="form-control " id="FeatureInput" placeholder="Geef hier je idee voor een gewenste feature" name="addfeature">
             </div>
             
             <button type="submit" class="btn btn-default" name="addfeature">Voeg toe</button>
@@ -43,7 +43,7 @@
     </div>  <!-- end div class row-->
 
 
-      <div class="row">
+      <div id="topten" class="row">
         <div class="col-md-8 col-md-offset-2"> 
 
              <table class="table table-hover">  
