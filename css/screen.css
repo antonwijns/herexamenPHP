@@ -1,13 +1,42 @@
 #adduser
 {
-	margin-top: 15px;
+	margin-top: 25px;
 
 }
 
-
+#overview
+{
+	margin-top: 25px;
+}
+#featureinput
+{
+	padding-top: :50px;
+}
 #login img
 {
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
 }
+
+#user img
+{
+	width: 40px;
+}
+
+.profilepic
+{
+	width: 40px;
+}
+#user
+{
+	padding-top: 5px;
+}
+
+.table span
+{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
+

@@ -48,8 +48,8 @@ if (isset($_POST['btnSignup']))
   <body>
 
 
-    <nav class="row">
-        <div id="navigation" class="col-md-8">
+    <nav class="row ">
+           <div id="navigation" class="col-md-6 col-md-offset-2">
 
           <ul class="nav nav-tabs " role="tablist">
             <li class="active">
@@ -60,11 +60,9 @@ if (isset($_POST['btnSignup']))
           </ul>
         </div> <!--end navigation-->    
       
-        <div id="user" class"col-md-4">
+    <div id="user" class="col-md-4 ">
           
-          <p>  Welcome </p>
-
-
+          <p>  Welcome  Anton Wijns <img src="img/ik.jpg" class="img-circle"> </p>    <!--user firtsname + lastname --> <!--picture that's uploaded-->
         </div>
 
     </nav>

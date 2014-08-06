@@ -52,30 +52,27 @@ if (isset($_POST['btnLogin']))
 <div class="row">
 <div class="col-md-4"></div>
   <div id="login" class="col-md-4 "> 
-                
-
-
-                <img src="img/logo.png" alt="logo">
-              
-
-  <form role="form">
-  <div class="form-group">
-    <label for="EmailLogin">E-mail</label>
-    <input type="email" class="form-control" id="EmailLogin" placeholder="Geef je e-mailadres">
-  </div>
-  <div class="form-group">
-    <label for="PasswordLogin">Paswoord</label>
-    <input type="password" class="form-control" id="PasswordLogin" placeholder="Voer een paswoord in">
-  </div>
-  
-
-
-  
- 
-  <button type="submit" class="btn btn-default">Inloggen</button>
-</form>
+             <img src="img/logo.png" alt="logo">
+          <form role="form">
+          <div class="form-group">
+            <label for="EmailLogin">E-mail</label>
+            <input type="email" class="form-control" id="EmailLogin" placeholder="Geef je e-mailadres">
+            </div>
+          <div class="form-group">
+            <label for="PasswordLogin">Paswoord</label>
+            <input type="password" class="form-control" id="PasswordLogin" placeholder="Voer een paswoord in">
+            </div>
+            <button type="submit" class="btn btn-default">Inloggen</button>
+            </form>
          
+    <div id="feedback"  role="alert">
+            <?php 
+            if (isset($feedback)){
+              echo "<p> " . $feedback . "</p>";
+            }
 
+              ?>
+            </div>
 
                 
 </div> <!--end col-md-4-->

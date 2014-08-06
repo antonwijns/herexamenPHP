@@ -12,7 +12,7 @@
 
 
     <nav class="row">
-        <div id="navigation" class="col-md-8">
+        <div id="navigation" class="col-md-6 col-md-offset-2">
 
           <ul class="nav nav-tabs " role="tablist">
             <li>
@@ -25,9 +25,7 @@
       
         <div id="user" class="col-md-4">
           
-          <p>  Welcome </p>
-
-
+          <p>  Welcome  Anton Wijns <img src="img/ik.jpg" class="img-circle"> </p>    <!--user firtsname + lastname --><!--picture that's uploaded-->
         </div>
     </nav>
 
@@ -36,41 +34,39 @@
 
     
     <div class="row">
-    <div id="adduser" class="col-md-4 col-md-offset-4 ">
+    <div id="overview" class="col-md-8 col-md-offset-2 ">
       
-           
-                <div class="form-group">
-                  <label for="InputFirstName">Voornaam</label>
-                  <input type="text" class="form-control" id="InputFirstName" placeholder="Geef Voornaam in">
-                </div>
+           <table class="table table-hover">  
 
-               
-                <div class="form-group">
-                  <label for="InputLastName">Achternaam</label>
-                  <input type="text" class="form-control" id="InputLastName" placeholder="Geef Achternaam in">
-                </div> 
+               <tr>
+                  <th>Feature</th>
+                  <th>Auteur</th> 
+                  <th>Verwijderen</th>
+                </tr>
 
-              <div class="form-group">
-                <label for="InputEmail">E-mail</label>
-                <input type="email" class="form-control" id="InputEmail" placeholder="Geef e-mailadres in">
-              </div>
-              <div class="form-group">
-                <label for="InputPassword">Paswoord</label>
-                <input type="password" class="form-control" id="InputPassword" placeholder="Kies een paswoord">
-              </div>
+                <tr>
+                  <td> Ik wil graag mijn profielfoto kunnen veranderen.</td>
+                  <td> Anton Wijns</td> 
+                  <td> <span class="glyphicon glyphicon-remove">   </span> </td>
+                </tr>
 
 
-             <div class="form-group">
-              <label for="InputFile">Voeg een profielfoto toe.</label>
-              <input type="file" id="InputFile">
-              <p class="help-block">Opgelet, bestand mag maximum 1 mb groot zijn.</p>
-            </div>
-  
-            <button type="submit" class="btn btn-default">Gebruiker toevoegen</button>
-</form>
+                 <tr>
+                  <td> Kleuren van de website kunnen aanpassen</td>
+                  <td> Steven Willems</td> 
+                  <td> <span class="glyphicon glyphicon-remove">   </span> </td>
+                </tr>
+            </table>
 
+
+
+           </table>
+              
 
     </div>    <!-- end add user-->
+
+
+
 
 
   </div> <!-- end row-->
