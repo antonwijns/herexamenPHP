@@ -57,10 +57,6 @@
                   <td> <span class="glyphicon glyphicon-remove">   </span> </td>
                 </tr>
             </table>
-
-
-
-           </table>
               
 
     </div>    <!-- end add user-->
